@@ -50,6 +50,7 @@ Thought:Do I need to use a tool? No
 AI: Sake Roll has been added to your order. Is there anything else you would like to add?*
 
 *Finished chain*
+
 **AI: Sake Roll has been added to your order. Is there anything else you would like to add?**
 
 **Human: no**
