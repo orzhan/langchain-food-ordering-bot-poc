@@ -61,6 +61,7 @@ AI: Alright, let me know if you have any other questions or if you're ready to s
 Finished chain.*
 
 **AI: Alright, let me know if you have any other questions or if you're ready to submit your order.**
+
 **Human: submt order, deliver to Main street 28**
 
 *Entering new AgentExecutor chain...
