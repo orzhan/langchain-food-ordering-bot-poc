@@ -11,11 +11,14 @@ Question answering on a custom data (I'm using a list of dicts here but it can h
 
 # example dialog
 
-**AI: I am TestSushi food ordering assistant. We have various rolls and sashimi. I am ready to answer your questions and accept an order
-Human: what rolls do you have?**
+**AI: I am TestSushi food ordering assistant. We have various rolls and sashimi. I am ready to answer your questions and accept an order**
+
+**Human: what rolls do you have?**
 
 *Entering new AgentExecutor chain...
+
 Thought: Do I need to use a tool? Yes
+
 Action: Menu
 Action Input: None
 Observation: Please provide a query
@@ -34,8 +37,10 @@ Sake Roll (16) - 9.5 - Grilled salmon, cucumber, and avocado rolled in nori and 
 Thought:Do I need to use a tool? No
 AI: We have Dragon Roll, California Roll, Philadelphia Roll, and Sake Roll.
 Finished chain*
-**AI: We have Dragon Roll, California Roll, Philadelphia Roll, and Sake Roll.
-Human: add sake roll plese**
+
+**AI: We have Dragon Roll, California Roll, Philadelphia Roll, and Sake Roll.**
+
+**Human: add sake roll plese**
 
 *Entering new AgentExecutor chain...
 Thought: Do I need to use a tool? Yes
@@ -47,15 +52,17 @@ Thought:Do I need to use a tool? No
 AI: Sake Roll has been added to your order. Is there anything else you would like to add?*
 
 *Finished chain*
-**AI: Sake Roll has been added to your order. Is there anything else you would like to add?
-Human: no**
+**AI: Sake Roll has been added to your order. Is there anything else you would like to add?**
+
+**Human: no**
 
 *Entering new AgentExecutor chain...
 Thought: Do I need to use a tool? No
 AI: Alright, let me know if you have any other questions or if you're ready to submit your order.
 Finished chain.*
-**AI: Alright, let me know if you have any other questions or if you're ready to submit your order.
-Human: submt order, deliver to Main street 28**
+
+**AI: Alright, let me know if you have any other questions or if you're ready to submit your order.**
+**Human: submt order, deliver to Main street 28**
 
 *Entering new AgentExecutor chain...
 Thought: Do I need to use a tool? Yes
@@ -65,4 +72,5 @@ Observation: created order id=1, estimated delivery time 30 min
 Thought:Do I need to use a tool? No
 AI: Your order has been submitted with ID 1 and estimated delivery time of 30 minutes. Thank you for choosing TestSushi!
 Finished chain.*
+
 **AI: Your order has been submitted with ID 1 and estimated delivery time of 30 minutes. Thank you for choosing TestSushi!**
