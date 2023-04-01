@@ -16,9 +16,7 @@ Question answering on a custom data (I'm using a list of dicts here but it can h
 **Human: what rolls do you have?**
 
 *Entering new AgentExecutor chain...
-
 Thought: Do I need to use a tool? Yes
-
 Action: Menu
 Action Input: None
 Observation: Please provide a query
