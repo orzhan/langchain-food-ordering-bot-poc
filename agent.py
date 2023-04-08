@@ -78,7 +78,8 @@ class MyConversationalAgent(Agent):
         regex = r"Action: (.*?)[\n]*Action Input: (.*)"
         match = re.search(regex, llm_output)
         if not match:
-            return None
+            return 'AI', llm_output
+            #return None
             # raise ValueError(f"Could not parse LLM output: `{llm_output}`")
         action = match.group(1)
         action_input = match.group(2)

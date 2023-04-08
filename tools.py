@@ -26,9 +26,9 @@ class MenuTool(BaseTool):
         # ret += index.query(query, llm=llm, chain_type="map_reduce",
         #                  chain_type_kwargs={'question_prompt': QUESTION_PROMPT, 'combine_prompt': COMBINE_PROMPT})
 
-        summaries = '\n'.join([doc.summary for doc in self.index.vectorstore.similarity_search(query)])
+        summaries = '\n'.join([doc.page_content for doc in self.index.vectorstore.similarity_search(query)])
 
-        ret = f"""Given the following extracted parts of a long document and a question, create a final answer. 
+        ret = f"""Given the following extracted parts of a long document and a question, create a final short answer. 
        If you don't know the answer, just say that you don't know. Don't try to make up an answer.
 
        =========
@@ -70,7 +70,7 @@ def describe_cart(full_menu):
 
 class CartViewTool(BaseTool):
     name = "cartView"
-    description = "input: none"
+    description = "input: 'view'"
     full_menu: List = None
 
     def __init(self, full_menu):

@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import os.path
+from importlib import reload
 
 from langchain.agents import Tool, AgentExecutor
 from langchain.chat_models import ChatOpenAI
+from langchain.llms import Anthropic
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
@@ -15,7 +17,10 @@ from data import full_menu, StringLoader, full_menu_text
 from prompt import GREETING
 from tools import MenuTool, CartViewTool, CartAddTool, CartRemoveTool, OrderTool
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, request_timeout=60)
+
+
+#llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, request_timeout=60)
+llm = Anthropic(temperature=1.0) #temperature=0
 persist_directory = 'db'
 embeddings = HuggingFaceEmbeddings()
 
@@ -62,7 +67,7 @@ tools = [
     )]
 
 memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages=True)
-memory.chat_memory.add_ai_message(GREETING)
+# memory.chat_memory.add_ai_message(GREETING)
 
 agent_obj = MyConversationalAgent.from_llm_and_tools(llm=llm, tools=tools, verbose=True)
 
