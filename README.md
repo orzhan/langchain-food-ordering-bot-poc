@@ -1,13 +1,15 @@
 # langchain-food-ordering-bot-poc
-An implementation of a food ordering bot with langchain and chatgpt
+An implementation of a food ordering bot with langchain and chatgpt. I've also made a (version)[https://github.com/orzhan/langchain-food-ordering-bot-poc/tree/anthropic] for Anthropic Claude LLM.
 
 # configuration
 
-export OPENAI_API_KEY, and edit data.py. Run with `python start.py`. 
+For chatgpt version, export OPENAI_API_KEY, and edit data.py. Run with `python start.py`. 
+
+For claude version, export ANTHROPIC_API_KEY, and edit data.py. Run with `python start.py`. 
 
 # capabilities
 
-Question answering on a custom data (I'm using a list of dicts here but it can handle larger files and databases), and custom tool execution (this bot allows to track some internal state for example cart, calculate something for example total, and call external APIs, for example submit an order)
+This code enables question answering on custom data using a list of dictionaries, which can also handle larger files and databases. It also facilitates the execution of custom tools, such as tracking internal states (e.g., cart), performing calculations (e.g., total), and calling external APIs (e.g., submitting an order), all while keeping track of the dialog context.
 
 # example dialog
 
