@@ -1,5 +1,5 @@
 # langchain-food-ordering-bot-poc
-An implementation of a food ordering bot with langchain and chatgpt. I've also made a (version)[https://github.com/orzhan/langchain-food-ordering-bot-poc/tree/anthropic] for Anthropic Claude LLM.
+An implementation of a food ordering bot with langchain and chatgpt. I've also made a [version](https://github.com/orzhan/langchain-food-ordering-bot-poc/tree/anthropic) for Anthropic Claude LLM.
 
 # configuration
 
